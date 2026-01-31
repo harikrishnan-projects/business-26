@@ -1,0 +1,84 @@
+/* Reset & body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgb(2, 143, 62), rgb(97, 240, 159));
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* 404 numbers */
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: 10rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+}
+
+.num {
+  display: inline-block;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Stagger animation for each number */
+.num:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.num:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.num:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+    color: #fff;
+  }
+  50% {
+    transform: translateY(-20px);
+    color:black;
+  }
+}
+
+/* Message */
+.message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  color: #ccc;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 30px;
+  background: black;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: black;
+  transform: scale(1.1);
+}
