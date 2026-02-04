@@ -112,9 +112,21 @@ nav ul {
 }
 
 nav ul li a {
+  display: inline-block;
   text-decoration: none;
   color: #e5f5f0;
   font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background-color 0.4s ease,
+              color 0.4s ease,
+              font-weight 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: #00e676;
+  color: #000;
+  font-weight: 600;
 }
 
 .nav-btn {
@@ -445,7 +457,7 @@ nav ul li a {
 .services-header h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color:rgb(0, 230, 118);
+  color:rgb(2, 82, 43);
 }
 
 .services-header p {
@@ -947,16 +959,24 @@ nav ul li a {
 
 /* PRICE BOX */
 .price-box {
-  background: #fff;
+  background:rgb(177, 237, 208);
   padding: 45px 30px;
   text-align: center;
   border-radius: 18px;
   position: relative;
+  /* border: 1px solid rgb(0, 230, 118); */
 
   /* SAFE animation */
   animation: slideUp 0.8s ease both;
 
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.price-box h3{
+  color:#555;
+}
+.price-box .price,
+.price-box .duration{
+  color: rgb(2, 82, 43);
 }
 
 .price-box:nth-child(1) { animation-delay: 0.1s; }
@@ -971,6 +991,20 @@ nav ul li a {
 /* POPULAR */
 .price-box.popular {
   border: 2px solid rgb(0, 230, 118);
+  background-color: rgb(2, 82, 43);
+}
+
+.price-box.popular .price{
+  color: white;
+}
+.price-box.popular h3{
+  color: white;
+}
+.price-box.popular .duration{
+  color: white;
+}
+.price-box.popular ul li{
+  color: white;
 }
 
 .badge {
@@ -1305,23 +1339,24 @@ nav ul li a {
   padding-left: 6px;
 }
 
-/* SOCIAL */
 .social-links {
+  display: flex;
+  gap: 30px;
   margin-top: 20px;
 }
 
 .social-links a {
-  display: inline-block;
-  margin-right: 12px;
-  font-size: 1.2rem;
-  color: #cfcfcf;
-  transition: 0.3s;
+  color: #ffffff;
+  font-size: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: rgb(0, 230, 118);
-  transform: translateY(-3px);
+  color: #00e676; /* optional hover color */
+  transform: scale(1.15);
 }
+
 
 /* NEWSLETTER */
 .newsletter {
